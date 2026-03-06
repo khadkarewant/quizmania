@@ -1,0 +1,9 @@
+secure/db.php
+.env
+*.log
+.well-known/
+google*
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,36 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# ==================================================
+# Baseline webroot hardening
+# ==================================================
+Options -Indexes
+
+# Block secret/backup files anywhere in webroot
+<FilesMatch "\.(env|ini|conf|sql|log|bak|old|swp|zip|tar|gz)$">
+  Require all denied
+</FilesMatch>
+
+# Block dotfiles like .env, .git, .htpasswd
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# ==================================================
+# Allow public static assets under /src
+# Block only sensitive folders + PHP execution
+# ==================================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+    # Allow PHP in /src/api (needed for AJAX endpoints)
+  RewriteRule ^src/api/.*\.php$ - [L]
+
+  # Block PHP execution anywhere else under /src
+  RewriteRule ^src/(?!api/).*\.php$ - [F,L]
+
+</IfModule>
