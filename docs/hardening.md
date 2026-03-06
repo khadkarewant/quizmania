@@ -1,6 +1,6 @@
 # Quizmania Security Hardening Notes
 
-This document records the security hardening applied to **Quizmania** (Core PHP + MySQL) to reach a **moderate, internship-ready security baseline** while preserving the existing architecture.
+This document records the security hardening applied to Quizmania, a live user-facing Core PHP + MySQL application, to reach a moderate, portfolio-ready security baseline while preserving the existing architecture.
 
 ---
 
