@@ -3,9 +3,9 @@
 
 Quizmania is a **Core PHP + MySQL** learning platform focused on MCQ-based preparation, practice, and product-driven course access.
 
-This project reflects security hardening work performed on a live, user-facing Core PHP + MySQL application. Changes were applied incrementally with production stability in mind.
+This repository reflects security hardening work performed on a **live, user-facing application**, with changes introduced incrementally to preserve production stability.
 
-This project was also used as a **backend security hardening case study**, where a legacy-style PHP application was systematically improved to reach a moderate, portfolio-ready baseline without rewriting it into a framework.
+It also serves as a **backend security hardening case study**, showing how a legacy-style PHP application can be systematically improved to reach a moderate, portfolio-ready baseline without rewriting it into a framework.
 
 ---
 
