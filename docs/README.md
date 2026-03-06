@@ -150,6 +150,8 @@ Do not commit:
 * private config files
 * logs or deployment-specific verification files
 
+Use `secure/db.example.php` as a template for local/private configuration. Do not commit real credentials.
+
 ---
 
 ## Current Status
